@@ -13,7 +13,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-#set $mod Mod4
+# set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -206,10 +206,10 @@ floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -218,10 +218,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -245,8 +245,10 @@ bindsym $mod+Shift+Right move right
 # orientation for new workspaces 
 default_orientation horizontal
 
-# split in horizontal orientation
-bindsym $mod+h split h
+# split in horizontal/behind orientation
+
+# bindsym $mod+h split h
+bindsym $mod+" split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -297,10 +299,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym m resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -324,7 +326,7 @@ mode "resize" {
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # font -misc-fixed-bold-r-normal-*-15-140-75-75-c-90-iso10646-1
 # font pango:DejaVu Sans Mono 12
-# font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 # font pango:Droid Sans Mono Dotted 12
 # font pango:hermit 12
 # font pango:Inconsolata 15
@@ -339,7 +341,7 @@ mode "resize" {
 # font pango:Sans 13
 # font pango:Noto Mono Regular 13
 # font pango:DroidSansMono 13
-font pango:Noto Mono Regular 13
+# font pango:Noto Mono Regular 13
 
 
 ################### MENU ######################
@@ -392,28 +394,50 @@ workspace 9 output $secondMonitor
 workspace 10 output $secondMonitor
 
 # switch to workspace
-bindsym $mod+ampersand workspace 1
-bindsym $mod+eacute workspace 2
-bindsym $mod+quotedbl workspace 3
-bindsym $mod+apostrophe workspace 4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+section workspace 6
-bindsym $mod+egrave workspace 7
-bindsym $mod+exclam workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+# bindsym $mod+ampersand workspace 1
+# bindsym $mod+eacute workspace 2
+# bindsym $mod+quotedbl workspace 3
+# bindsym $mod+apostrophe workspace 4
+# bindsym $mod+parenleft workspace 5
+# bindsym $mod+section workspace 6
+# bindsym $mod+egrave workspace 7
+# bindsym $mod+exclam workspace 8
+# bindsym $mod+ccedilla workspace 9
+# bindsym $mod+agrave workspace 10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
 
 # move focused container to workspace
-bindsym $mod+Shift+ampersand move container to workspace 1; workspace 1
-bindsym $mod+Shift+eacute move container to workspace 2; workspace 2
-bindsym $mod+Shift+quotedbl move container to workspace 3; workspace 3
-bindsym $mod+Shift+apostrophe move container to workspace 4; workspace 4
+# bindsym $mod+Shift+ampersand move container to workspace 1; workspace 1
+# bindsym $mod+Shift+eacute move container to workspace 2; workspace 2
+# bindsym $mod+Shift+quotedbl move container to workspace 3; workspace 3
+# bindsym $mod+Shift+apostrophe move container to workspace 4; workspace 4
+# bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+# bindsym $mod+Shift+section move container to workspace 6; workspace 6
+# bindsym $mod+Shift+egrave move container to workspace 7; workspace 7
+# bindsym $mod+Shift+exclam move container to workspace 8; workspace 8
+# bindsym $mod+Shift+ccedilla move container to workspace 9; workspace 9
+# bindsym $mod+Shift+agrave move container to workspace 10; workspace 10
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
 bindsym $mod+Shift+5 move container to workspace 5; workspace 5
-bindsym $mod+Shift+section move container to workspace 6; workspace 6
-bindsym $mod+Shift+egrave move container to workspace 7; workspace 7
-bindsym $mod+Shift+exclam move container to workspace 8; workspace 8
-bindsym $mod+Shift+ccedilla move container to workspace 9; workspace 9
-bindsym $mod+Shift+agrave move container to workspace 10; workspace 10
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
 
 
 ################### MOUSE ######################
@@ -465,7 +489,7 @@ for_window [class="Spotify"] move to workspace 10
 # num lock activated
 exec_always --no-startup-id numlockx on
 # dropbox
-exec dropbox start
+# exec dropbox start
 # insync
 exec insync start
 # volume
@@ -484,15 +508,15 @@ exec clipit
 #distro dependent applications are at bottom of config like filemanager ...
 
 #browsers
-exec firefox
-for_window [class="Firefox"] focus
+# exec firefox
+# for_window [class="Firefox"] focus
 
 #Mail clients
 #exec evolution
 
 #Music
-exec --no-startup-id spotify
-for_window [class="Spotify"] focus
+# exec --no-startup-id spotify
+# for_window [class="Spotify"] focus
 
 #Conky
 #exec ~/.config/i3/start-conkys.sh
@@ -539,8 +563,8 @@ bindsym control+mod1+e exec evolution;workspace 9;focus
 #bindsym control+mod1+e exec geary;workspace 9;focus
 
 #workspace 10 related
-bindsym $mod+F10 exec spotify;workspace 10;focus
-bindsym control+mod1+s exec spotify;workspace 10;focus
+# bindsym $mod+F10 exec spotify;workspace 10;focus
+# bindsym control+mod1+s exec spotify;workspace 10;focus
 
 #catfish
 bindsym control+mod1+c exec catfish;focus
@@ -711,7 +735,7 @@ new_float normal
 
 # AZERTY KEYBOARD
 # Change this if you use qwerty
-exec setxkbmap be
+exec setxkbmap us
 
 
 ###################       UNCLUTTER      ##############################
@@ -727,6 +751,7 @@ exec unclutter
 
 bar {
 
+    # position top
     height 25
     workspace_buttons yes
     # font pango:DroidSansMono 13
@@ -751,9 +776,9 @@ bar {
     # put hastag in front if not installed
 
 #status_command i3blocks
-status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#status_command i3blocks -c ~/.config/i3/i3blocks-original.conf
-#status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
+# status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# status_command i3blocks -c ~/.config/i3/i3blocks-original.conf
+status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
 
 
 # OPTION 3 : conky
@@ -877,9 +902,9 @@ client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 # want it
 # packer i3-gaps-next-git --noedit
 
-for_window [class="^.*"] border pixel 5
-gaps inner 10 
-gaps outer 5
+for_window [class="^.*"] border pixel 3
+gaps inner 8 
+gaps outer 3
 #smart_gaps on
 #smart_borders on
 
@@ -902,24 +927,24 @@ mode "$mode_gaps" {
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
+        bindsym plus  gaps inner current plus 3
+        bindsym minus gaps inner current minus 3
         bindsym 0     gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+plus  gaps inner all plus 3
+        bindsym Shift+minus gaps inner all minus 3
         bindsym Shift+0     gaps inner all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
+        bindsym plus  gaps outer current plus 3
+        bindsym minus gaps outer current minus 3
         bindsym 0     gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+plus  gaps outer all plus 3
+        bindsym Shift+minus gaps outer all minus 3
         bindsym Shift+0     gaps outer all set 0
 
         bindsym Return mode "default"
@@ -946,6 +971,7 @@ exec_always compton --config ~/.config/i3/compton.conf
 # gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/terminator
 # gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/gnome-terminal
 
+# bindsym $mod+Return exec urxvt;focus
 bindsym $mod+Return exec gnome-terminal;focus
 #bindsym $mod+Return exec i3-sensible-terminal;focus
 #bindsym $mod+Return exec terminator;focus
@@ -974,7 +1000,7 @@ bindsym control+Shift+Escape exec gnome-system-monitor;focus
 #workspace 2 related
 #bindsym $mod+F2 exec subl;workspace 2;focus
 #bindsym control+mod1+w exec subl;workspace 2;focus
-bindsym $mod+F2 exec subl3;workspace 2;focus
+bindsym $mod+F2 exec gnome-terminal;workspace 2;focus
 bindsym control+mod1+w exec subl3;workspace 2;focus
 
 #workspace 8 related
@@ -1011,12 +1037,12 @@ bindsym control+mod1+b exec nemo --no-desktop;workspace 8;focus
 
 #sublime-text
 #exec subl
-exec subl3
+#exec gnome-terminal
 
 #Authentication dialog
 
 #arch budgie
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #Linux Mint
 #exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
@@ -1030,12 +1056,12 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec pamac-tray
 
 # bluetooth
-exec blueberry-tray
+# exec blueberry-tray
 #exec --no-startup-id blueman-applet
 
 # network
 #antergos
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 #install this program for applet
-#exec network-manager-applet
+exec network-manager-applet
