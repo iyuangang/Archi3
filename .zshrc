@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/timyuan/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
   export TERM=xterm-256color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -65,7 +65,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -s /home/timyuan/.autojump/etc/profile.d/autojump.sh ]] && source /home/timyuan/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 
 # User configuration
 
