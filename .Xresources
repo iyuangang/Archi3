@@ -5,6 +5,7 @@ Xft.rgba:      rgb
 Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -130,8 +131,9 @@ URxvt*cursorBlink:                true
 URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
+URxvt*inheritPixmap:            true
+URxvt*transparent:              true
+URxvt*shading:                  72
 ! URxvt*shading:                  138
 
 ! Normal copy-paste keybindings without perls
